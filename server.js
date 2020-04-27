@@ -5,7 +5,7 @@ const session = require('koa-session')
 const bodyparser = require('koa-bodyparser')
 const staticFiles = require('koa-static')
 const mongoose = require('mongoose')
-const moment = require('moment') 
+const moment = require('moment')
 const router = require('./server/router')
 const app = new Koa()
 //
@@ -22,12 +22,12 @@ mongoose.connect(dbUrl,options)
 //配置session
 app.keys = ['some secret hurr']
 const CONFIG = {
-  key: 'koa:sess', 
+  key: 'koa:sess',
   maxAge: 86400000,
   overwrite: true,
-  httpOnly: true, 
-  signed: true, 
-  rolling: false, 
+  httpOnly: true,
+  signed: true,
+  rolling: false,
   renew: false,
 };
 app.use(session(CONFIG, app));

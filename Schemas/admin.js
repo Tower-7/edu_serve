@@ -72,9 +72,9 @@ AdminSchema.statics = {
 		return db
 		.update({_id: id},_db,{upsert:true})
 	},
-	findByName: async(Admin,name)=> {
+	findByName: async(Admin,username)=> {
 		return Admin
-		.findOne({name: name})
+		.findOne({username: username})
 	},
 	deleteById: function(id,cb) {
 		return this
@@ -85,8 +85,3 @@ AdminSchema.statics = {
 
 
 module.exports = AdminSchema
-
-
-
-
-

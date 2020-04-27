@@ -37,6 +37,7 @@ module.exports = (app) => {
 	// 后台管理
 	router.get('/admin/',Admin.index) //管理员注册
 	router.post('/admin/sign_up',Admin.sign_up) //管理员注册
+	router.post('/admin/sign_in',Admin.sign_in) //管理员注册
 
 	router.post('/upload',Common.upload)//上传
 
